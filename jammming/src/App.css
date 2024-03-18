@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #240046;
+  max-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title {
+  text-align: left;
+  font-size: 2em;
+  padding-left: 50px;
+  color: #fefcfb;
+  margin: 10px;
+  
+}
+
+#Body {
+  height: 100vh;
+  width: 100%;
+  background-color: #7b2cbf;
+  display: flex;
+  flex-direction: column;
+}
+
+#Content {
+  height: 100%;
+  margin: 100px;
+  background-color: #5a189a;
+  border: #1d1e1f;
+  border-radius: 2px;
+  border-style: solid;
+}
+
+#SearchBar {
+  height: 50px;
+  margin-bottom: 10px;
+  border-bottom: solid;
+  border-color: #636363;
+}
+
+#Results {
+  height: 100%;
 }
