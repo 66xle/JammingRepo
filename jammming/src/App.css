@@ -40,10 +40,18 @@
 .title {
   text-align: left;
   font-size: 2em;
-  padding-left: 50px;
+  padding-left: 10px;
   color: #fefcfb;
   margin: 10px;
   
+}
+
+.scrollable {
+  padding: 10px 20px;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify; 
 }
 
 #Body {
@@ -61,6 +69,8 @@
   border: #1d1e1f;
   border-radius: 2px;
   border-style: solid;
+  flex-direction: column;
+  display: flex;
 }
 
 #SearchBar {
