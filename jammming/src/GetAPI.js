@@ -28,7 +28,7 @@ async function getToken() {
 }
 
 async function getTrackInfo(access_token) {
-  const response = await fetch("https://api.spotify.com/v1/tracks/4cOdK2wGLETKBW3PvgPWqT", {
+  const response = await fetch("https://api.spotify.com/v1/recommendations/available-genre-seeds", {
     method: 'GET',
     headers: { 'Authorization': 'Bearer ' + access_token },
   });
@@ -53,4 +53,4 @@ async function getTracks(access_token, query) {
 //   })
 // });
 
-export { getToken, getTracks }
+export { getToken, getTracks, getTrackInfo }

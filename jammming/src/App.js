@@ -1,7 +1,7 @@
-import './App.css';
+import './css/App.css';
 import { useState, useEffect } from 'react';
 import SearchBar from './Components/SearchBar.js';
-import Button from './Components/Button.js';
+
 import MusicInfo from './Components/MusicInfo.js';
 
 import { getToken } from './GetAPI.js'
@@ -23,8 +23,7 @@ function App() {
         <div id="Content">
           <div id="SearchBar">
             <h2 className="title">Search</h2>
-            <SearchBar/>
-            <Button />
+            <SearchBar accessToken={accessToken}/>
           </div>
           <div id="Results">
             <h2 className="title">Results</h2>

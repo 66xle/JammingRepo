@@ -1,9 +1,20 @@
 import React from 'react';
 import '../css/Button.css';
+import { getTracks, getTrackInfo } from '../GetAPI.js';
 
-function Button() {
+
+function displayResults(searchQuery, accessToken)
+{
+    const idk = getTracks(accessToken, searchQuery);
+    console.log(idk);
+}
+
+function Button({searchQuery, accessToken}) {
+
+    
+
     return (
-        <button id="button">Go</button>
+        <button id="button" onClick={displayResults(searchQuery, accessToken)}>Go</button>
     )
 }
 
