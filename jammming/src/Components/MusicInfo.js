@@ -2,11 +2,20 @@ import React from 'react';
 import Button from './Button.js';
 import '../css/MusicInfo.css';
 
-function MusicInfo() {
+function MusicInfo({tracks}) {
+
+    
+
+
     return (
         <div class="music-info">
-            <h3>Song Name - Album: Artist</h3>
-            <Button style="float: left;"></Button>
+            {
+                tracks.map((value, index) => {
+                    return (
+                        <h3>{value.name} - {value.artists.map((value, index) => value.name)}</h3>
+                    )
+                })
+            }
         </div>
     )
 }

@@ -42,7 +42,11 @@ async function getTracks(access_token, query) {
     headers: { 'Authorization': 'Bearer ' + access_token },
   });
 
-  return await response.json();
+  
+
+  const data = await response.json();
+
+  return data.tracks.items;
 }
 
 

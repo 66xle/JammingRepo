@@ -10,9 +10,15 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null)
 
+  const [tracks, setTracks] = useState([])
+
   useEffect(() => {
     getToken().then(response => setAccessToken(response.access_token))
   }, [])
+
+  useEffect(() => {
+    console.log(tracks);
+  }, [tracks])
 
   return (
     <div className="App">
@@ -23,12 +29,12 @@ function App() {
         <div id="Content">
           <div id="SearchBar">
             <h2 className="title">Search</h2>
-            <SearchBar accessToken={accessToken}/>
+            <SearchBar accessToken={accessToken} setTracks={setTracks}/>
           </div>
           <div id="Results">
             <h2 className="title">Results</h2>
             <div className="scrollable">
-              <MusicInfo />
+              <MusicInfo tracks={tracks}/>
             </div>
           </div>
         </div>
