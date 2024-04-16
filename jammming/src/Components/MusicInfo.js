@@ -1,7 +1,6 @@
 import React from 'react';
-import Button from './Button.js';
 import '../css/MusicInfo.css';
-
+import '../css/Button.css';
 function MusicInfo({tracks}) {
 
     
@@ -12,7 +11,10 @@ function MusicInfo({tracks}) {
             {
                 tracks.map((value, index) => {
                     return (
-                        <h3>{value.name} - {value.artists.map((value, index) => value.name)}</h3>
+                        <div class="song">
+                            <h3 class="text">{value.name} - {value.artists.map((value, index) => value.name)}</h3>
+                            <button id="button">+</button>
+                        </div>
                     )
                 })
             }

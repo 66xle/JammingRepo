@@ -8,10 +8,19 @@
     width: auto;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align: justify; 
+    text-align: start; 
 }
 
-.button {
-    float: right;
-    padding: 1000px;
+.text {
+    color: white;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-color: black;
+    border-radius: 1px;
+    border-top-style: solid;
 }
