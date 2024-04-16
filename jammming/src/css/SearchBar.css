@@ -9,3 +9,11 @@
     box-sizing: border-box;
     border-radius: 2.5em;
 }
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 30em;
+}
