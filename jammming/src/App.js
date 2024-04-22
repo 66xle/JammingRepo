@@ -34,7 +34,7 @@ function App() {
           <div id="Results">
             <h2 className="title">Results</h2>
             <div className="scrollable">
-              <MusicInfo tracks={tracks}/>
+              <MusicInfo tracks={tracks} setTracks={setTracks}/>
             </div>
           </div>
         </div>

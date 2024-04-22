@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getTracks, getTrackInfo } from '../GetAPI.js';
 import '../css/SearchBar.css';
 import '../css/Button.css';
-
+import Track from '../Class/Track.js';
 
 function displayResults(searchQuery, accessToken, setTracks)
 {
@@ -15,7 +15,13 @@ function displayResults(searchQuery, accessToken, setTracks)
             items = [..._items];
             console.log("string", items);
 
-            setTracks(items);
+            let newTracks = [];
+
+            items.map((element, index) => {
+                newTracks.push(new Track(element, false));
+            })
+
+            setTracks(newTracks);
         });
     }
 }
