@@ -1,8 +1,17 @@
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+}
+
 #searchBar {
     font-family: inherit;
     font-weight: bold;
     font-size: 20px;
-    width: 20em;
+    min-width: 0;
+    width: auto;
     height: 2em;
     padding: 0.3em 2.1em 0.3em 0.8em;
     border: none;
@@ -10,10 +19,3 @@
     border-radius: 2.5em;
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 30em;
-}
